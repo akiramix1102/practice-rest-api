@@ -1,3 +1,65 @@
 button.btn-custom.btn.btn-secondary {
   display: block;
 }
+
+.pagination {
+  justify-content: center;
+}
+
+.row-form {
+  flex-direction: column;
+  background: #454d55;
+}
+
+.row-form .btn-custom {
+  margin: 0 auto;
+}
+
+.text-center.title {
+  padding-bottom: 20px;
+  margin-top: 20px;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px
+}
+
+.Toastify__toast--default {
+  background: #07bc0c !important;
+  color: #fff !important;
+}
+
+.btn-secondary {
+  background-color: transparent !important;
+}
+
+.btn-outline-dark:not(:disabled):not(.disabled).active,
+.btn-outline-dark:not(:disabled):not(.disabled):active,
+.show>.btn-outline-dark.dropdown-toggle{
+  color: #000 !important;
+}
+.control.row {
+  margin-bottom: 20px;
+}
+
+.control.row .col-md-3 {
+  text-align: center;
+}
+
+.container {
+  margin-top: 20px;
+  background: #fff;
+  border: 1px solid #CEB4B4;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+body {
+  height: 100vh;
+  background: #eee;
+}
+.row-form.row {margin: 0;border-radius: 5px;padding: 10px 0;}
+
+.form-group label {
+    color: #fff;
+}
+table.table.table-dark button {
+  margin-left: 5px;
+}

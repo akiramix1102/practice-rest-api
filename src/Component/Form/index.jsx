@@ -30,7 +30,7 @@ const FormControl = ({  onSubmit }) => {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Row>
+            <Row className="row-form">
                 <Col>
                     <FormGroup>
                         <Label for="name">Name</Label>
@@ -72,9 +72,8 @@ const FormControl = ({  onSubmit }) => {
                 </Col>
                 <Col>
                     <FormGroup>
-                        <Label for="submit">Submit</Label>
-                        <Button className="btn-custom">
-                            Submit
+                        <Button className="btn-custom btn btn-success">
+                            Add
           </Button>
                     </FormGroup>
                 </Col>

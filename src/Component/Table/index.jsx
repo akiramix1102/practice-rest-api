@@ -4,7 +4,7 @@ import { Table } from "reactstrap";
 import { faTrash, faEdit } from "@fortawesome/free-solid-svg-icons";
 import ModalExample from "../Modal/index";
 
-const FormTable = ({ products, onDelete,getDataToPut }) => {
+const FormTable = ({ products, onDelete,getDataToPut}) => {
 
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -26,6 +26,13 @@ const handleToggleHide = () => {
 const onGetData=(nameValue,priceValue,stockValue,id)=>{
     getDataToPut(nameValue,priceValue,stockValue,id)
 }
+// const searchProduct=products.filter(product=>{
+//     if(keyWord){
+//         return product.name.toLowerCase().indexOf(keyWord) !== -1
+//     }
+//         return products;
+
+// })
 return (
     <>
         <Table dark>
