@@ -3,7 +3,7 @@ import axios from "axios";
 import Swal from 'sweetalert2'
 import { ToastContainer, toast } from 'react-toastify';
 
-import { Container, Row, Col, Button } from "reactstrap";
+import { Container, Row, Col } from "reactstrap";
 import FormTable from "./Component/Table";
 import Form from "./Component/Form";
 import Pagination from "./Component/Pagination";
@@ -15,8 +15,8 @@ import { useState, useEffect } from "react";
 function App() {
   const [products, setProducts] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [productPerPage] = useState(5);
-  const [sortBy,setSortBy]=useState('');
+  const [productPerPage,setProductPerPage] = useState(5);
+  const [sortBy,setSortBy]=useState('name');
   const [sortValue,setSortValue]=useState(1)
 
   const [showForm, setShowForm] = useState(false);
@@ -111,30 +111,42 @@ function App() {
 
   }
 
-  const onSort=(sortBy,sortValue)=>{
-   setSortBy(sortBy);
-   setSortValue(sortValue)
-    if(sortBy==='name'){
+  const onSort=(by,value)=>{
+   setSortBy(by);
+   setSortValue(value);
+  //  console.log(sortBy,sortValue);
+  console.log(`${by} - ${value}`);
+  
+    if(by==='name'){
       products.sort((a,b)=>{
-        if(a.name>b.name) return sortValue;
-        else if(a.name<b.name) return -sortValue;
+        if(a.name>b.name) return value;
+        else if(a.name<b.name) return -value;
         else return 0;
       })
     }
-    else if(sortBy==='price'){
+    else if(by==='price'){
       products.sort((a,b)=>{
-        if(a.price>b.price) return -sortValue;
-        else if(a.price<b.price) return sortValue;
+        if(a.price>b.price) return -value;
+        else if(a.price<b.price) return value;
         else return 0;
       })
     }
     else{
       products.sort((a,b)=>{
-        if(a.stock>b.stock) return -sortValue;
-        else if(a.stock<b.stock) return sortValue;
+        if(a.stock>b.stock) return -value;
+        else if(a.stock<b.stock) return value;
         else return 0;
       })
     }
+  }
+
+  const onShowForm =(formStatus)=>{
+      setShowForm(formStatus);
+  }
+  const onChangeProductPerPage =(numberProduct)=>{
+    setProductPerPage(numberProduct)
+    
+    
   }
   return (
     <>
@@ -142,16 +154,10 @@ function App() {
         <div className="text-center title">
           <h1>Quản Lý Sản Phẩm</h1>
         </div>
-        <Row className="control">
-          <Col md={3}>
-            <Button color="danger" outline onClick={() => setShowForm(!showForm)}>
-              Add Product
-          </Button>
-          </Col>
-          <ControlForm handleSearch={handleSearch} onSort={onSort} />
-        </Row>
 
-        
+        <Row className="control">
+          <ControlForm handleSearch={handleSearch} onSort={onSort} onShowForm={onShowForm} onChangeProductPerPage={onChangeProductPerPage}/>
+        </Row>
 
         <Row>
           <Col xs={showForm ? 4 : 12}>
