@@ -21,7 +21,7 @@ function App() {
 
   const [showForm, setShowForm] = useState(false);
 
-  const baseUrl = "http://localhost:3001/products";
+  const baseUrl = "https://5ece614261c8480016701483.mockapi.io/products";
 
   useEffect(() => {
     axios.get(baseUrl).then((res) => setProducts(res.data));
@@ -145,8 +145,6 @@ function App() {
   }
   const onChangeProductPerPage =(numberProduct)=>{
     setProductPerPage(numberProduct)
-    
-    
   }
   return (
     <>
