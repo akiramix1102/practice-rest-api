@@ -1,5 +1,9 @@
 {
   "projects": {
+<<<<<<< HEAD
     "default": "products-management-reactjs"
+=======
+    "default": "products-management-65fc3"
+>>>>>>> 337f9505ead5168373767b5bb0dccd1eecebfb31
   }
 }

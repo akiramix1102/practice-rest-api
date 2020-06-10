@@ -1,14 +1,8 @@
 {
   "products": [
     {
-      "name": "Redmi Note 8",
-      "price": 310,
-      "stock": 124,
-      "id": 1
-    },
-    {
       "name": "Samsung Galaxy s10",
-      "price": 0,
+      "price": 578,
       "stock": 342,
       "id": 2
     },
@@ -25,12 +19,6 @@
       "id": 4
     },
     {
-      "name": "Iphone X 128Gb",
-      "price": 1300,
-      "stock": 248,
-      "id": 5
-    },
-    {
       "name": "Iphone 8",
       "price": 500,
       "stock": 10,
@@ -41,6 +29,30 @@
       "price": 300,
       "stock": 41,
       "id": 7
+    },
+    {
+      "name": "iphone 4",
+      "price": 12,
+      "stock": 23423,
+      "id": 8
+    },
+    {
+      "name": "",
+      "price": 0,
+      "stock": 0,
+      "id": 9
+    },
+    {
+      "name": "thecanteen",
+      "price": 1,
+      "stock": 123,
+      "id": 10
+    },
+    {
+      "name": "thecanteen",
+      "price": 111,
+      "stock": 234,
+      "id": 11
     }
   ]
 }
